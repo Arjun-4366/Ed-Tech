@@ -9,10 +9,10 @@ function PlayVideo() {
       try {
         const response = await axios.get("http://localhost:4004/getVideo");
 
-        console.log(response);
+        console.log("fetched video url",response.data.Videourl);
 
-        setvideoUrl(response.data.videoUrl);
-        console.log(response.data.videoUrl);
+        setvideoUrl(response.data.Videourl);
+     
       } catch (error) {
         console.log(error.message);
       }
@@ -20,9 +20,9 @@ function PlayVideo() {
     fetchVideo();
   }, []);
   return (
-    <div className="h-[600px] w-auto bg-gray-700 flex items-center justify-center">
+    <div className="h-[600px] w-auto bg-blue-200 flex items-center justify-center p-10">
       {videoUrl ? (
-        <video controls width="600">
+        <video controls width="900" className="rounded-lg">
           <source src={videoUrl} type="video/mp4" />
         </video>
       ) : (
