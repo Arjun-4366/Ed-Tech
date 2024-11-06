@@ -5,10 +5,11 @@ import axios from "axios";
 function PaymentModal() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  console.log("backend url",process.env.REACT_APP_BACKEND_BASE_URL)
+  console.log(process.env)
   const showLoading = () => {
     setOpen(true);
-    setLoading(true);
+    setLoading(true); 
 
     setTimeout(() => {
       setLoading(false);
@@ -17,7 +18,7 @@ function PaymentModal() {
 
   const paypalPayment = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_BACKEND_BASED_URL}/paypal-payment`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_BASE_URL}/paypal-payment`);
       const approvalUrl = response.data.approvalUrl;
       window.location.href = approvalUrl;
     } catch (err) {
