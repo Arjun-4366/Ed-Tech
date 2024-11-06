@@ -1,5 +1,5 @@
 const admin = require("firebase-admin")
-const serviceAccount = require("path/to/serviceAccountKey.json")
+const serviceAccount = require("C:/Users/arjun/OneDrive/Desktop/Brightmind/backend/serviceAccount.json")
 
 admin.initializeApp({
     credential:admin.credential.cert(serviceAccount),
