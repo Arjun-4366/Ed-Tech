@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const cors = require('cors');
 app.use(cors({
-    origin:"http://localhost:3000"
+    origin:process.env.FRONTEND_URL
 }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
