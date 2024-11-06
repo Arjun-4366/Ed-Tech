@@ -10,6 +10,7 @@ import Loading from "./components/Loading";
 import SuccessPage from "./components/SuccessPage";
 import FailedPage from "./components/FailedPage";
 import AdminPanel from "./components/AdminPanel";
+import PlayVideo from "./components/VideoPlayer";
 const Hero = lazy(() => import("./components/Hero"));
 function App() {
   const [loading,setLoading] = useState(true)
@@ -30,6 +31,7 @@ function App() {
               </Suspense>} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/playVideo" element={<PlayVideo/>} />
           <Route path="/success" element={<SuccessPage />} />
           <Route path="/failed" element={<FailedPage />} />
           <Route path="/register" element = {<Register/>}/>
