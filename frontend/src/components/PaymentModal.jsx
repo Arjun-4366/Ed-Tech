@@ -17,7 +17,7 @@ function PaymentModal() {
 
   const paypalPayment = async () => {
     try {
-      const response = await axios.get('http://localhost:4004/paypal-payment');
+      const response = await axios.get(`${process.env.REACT_BACKEND_BASED_URL}/paypal-payment`);
       const approvalUrl = response.data.approvalUrl;
       window.location.href = approvalUrl;
     } catch (err) {
