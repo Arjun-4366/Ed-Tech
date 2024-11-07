@@ -9,5 +9,8 @@
     "nodemon": "^3.1.4",
     "path": "^0.12.7",
     "paypal-rest-sdk": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17"
   }
 }
