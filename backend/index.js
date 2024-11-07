@@ -5,7 +5,9 @@ dotenv.config();
 
 const cors = require('cors');
 app.use(cors({
-    origin:'https://ed-tech-kc2p.vercel.app'
+    origin:'https://ed-tech-kc2p.vercel.app',
+    methods:'GET,POST,PUT,DELETE',
+    credentials:true
 }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
