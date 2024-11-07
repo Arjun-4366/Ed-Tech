@@ -7,7 +7,7 @@ function PlayVideo() {
   useEffect(() => {
     const fetchVideo = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_BACKEND_BASED_URL}/getVideo`);
+        const response = await axios.get("https://ed-tech-eight.vercel.app/getVideo");
         
 
         console.log("fetched video url",response.data.Videourl);
